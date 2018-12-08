@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+	<title></title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="FontAwesome/css/all.css">
+	<script src="js/proforma.js" type="text/javascript" charset="utf-8" async defer></script>
+</head>
+<body>
+	
+	<header class="cabecera">
+		<h1 class="tituloPrincipal">Proforma</h1>
+	</header>
+
+	<main>
+		<section class="menuArriba">
+			<nav>
+				<ul id="menuHorizontal">
+					<li><a href="index.html">Inicio</a></li>
+					<li><a href="catalogo.html">Catalogo</a>
+
+						<ul>
+							<li><a href="listaSillones.html">Sillones</a></li>
+							<li><a href="listaMesasComedor.html">Mesas de comedor</a></li>
+							<li><a href="listaMesasCafe.html">Mesas para el café</a></li>
+							<li><a href="listaCamas.html">Camas</a></li>
+						</ul>
+
+					</li>
+						
+					<li><a href="contacto.html">Contacto</a></li>
+					<li><a href="QuienesSomos.html">Quienes somos</a></li>
+					<li><a href="proforma.html">Proforma</a></li>
+					<li><a href="videos.html">Videos</a></li>
+				</ul>
+			</nav>
+		</section>
+		<section id="contenedorProductos">
+			<div id="btn_agregarProducto">
+				<div id="contenedorSignoMás">
+					<div></div>
+					<div></div>
+				</div>
+				<p>Agregar Producto</p>
+			</div>
+			<div id="contenedorLista">
+				<!-- fila que indica que significa cada una de las cosas que contiene una fila -->
+				<div id="etiquetasContenedorFila">
+					<h3>Nombre Producto</h3>
+					<h3>Cantidad</h3>
+					<h3>Precio Unidad</h3>
+					<h3>Total</h3>
+				</div>
+				<div id="contenedorListaProductos">
+					<ul id="listaProductos">
+						
+					</ul>
+				</div>
+			</div>
+		</section>
+		<section id="detalleFlete">
+			<h2>Detalle Flete</h2>
+			<!-- caja que contiene el total de kilometros del flete -->
+			<div id="contenedorTotalKilometros">
+				<label for="iptTotalKilometros">Total Kilometros:</label>
+				<br>
+				<input id="iptTotalKilometros" type="text" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57"> <!--validacion que evita que el numero sea negativo-->
+				<button id="btn_agregarFlete">Agregar Flete</button>
+				<button id="btn_editarFlete">Cambiar Flete</button>
+				<button id="btn_eliminarFlete">Eliminar Flete</button>
+			</div>
+		</section>
+		<section id="detalleDescuento">
+			<h2>Descuento</h2>
+			<!-- caja que contiene el Descuento de la compra -->
+			<div id="contenedorDescuento">
+				<label for="iptDescuento">Porcentaje Descuento:</label>
+				<br>
+				<input id="iptDescuento" type="text" maxlength="3" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57"> <!--validacion que evita que el numero sea negativo-->
+				<button id="btn_agregarDescuento">Agregar</button>
+				<button id="btn_cambiarDescuento">Cambiar</button>
+				<button id="btn_eliminarDescuento">Eliminar</button>
+			</div>
+		</section>
+		<section id="totalPago">
+			<h2>Total a pagar</h2>
+			<div id="contenedorTotalPago">
+				<p>Subtotal: </p>
+				<p id="txt_subtotal">₡ 0</p>
+				<br>
+				<p>Descuento: </p>
+				<p id="txt_descuento">₡ 0</p>
+				<br>
+				<p>Impuestos: </p>
+				<p id="txt_impuestos">₡ 0</p>
+				<br>
+				<p>Flete: </p>
+				<p id="txt_flete">₡ 0</p>
+				<br>
+				<p>Total a pagar: </p>
+				<p id="txt_total">₡ 0</p>
+			</div>
+		</section>
+		<section>
+			<div class="modal">
+				<div class="contenedorModal">
+					
+					<header>
+						<h1>Seleccione el producto deseado</h1>
+					</header>
+					<section>
+						<div id="contenedorBuscador">
+							<input id="iptNombreProducto" type="text" placeholder="Nombre del producto">
+							<button id="btn_buscar">Buscar</button>
+						</div>
+						<div id="contenedorListaProductosDisponibles">
+							<ul id="listaProductosDisponibles">
+								<li id="productoNoEncontrado">Ningun producto coinside con el nombre ingresado!</li>
+								<li class="productoDisponible" onclick="seleccionarProducto(this)">
+									<p class="nombreProducto">Sofa dos plazas</p>
+									<p class="precioProducto">450000</p>
+								</li>
+								<li class="productoDisponible" onclick="seleccionarProducto(this)">
+									<p class="nombreProducto">Set sofa de tres plazas</p>
+									<p class="precioProducto">530000</p>
+								</li>
+								<li class="productoDisponible" onclick="seleccionarProducto(this)">
+									<p class="nombreProducto">Sofa seccional</p>
+									<p class="precioProducto">625000</p>
+								</li>
+								<li class="productoDisponible" onclick="seleccionarProducto(this)">
+									<p class="nombreProducto">Sofa seccional</p>
+									<p class="precioProducto">625000</p>
+								</li>
+								<li class="productoDisponible" onclick="seleccionarProducto(this)">
+									<p class="nombreProducto">Sofa</p>
+									<p class="precioProducto">500000</p>
+								</li>
+								<li class="productoDisponible" onclick="seleccionarProducto(this)">
+									<p class="nombreProducto">Dos piezas de sofa dos plazas</p>
+									<p class="precioProducto">620000</p>
+								</li>
+								<li class="productoDisponible" onclick="seleccionarProducto(this)">
+									<p class="nombreProducto">Sofa esquinero</p>
+									<p class="precioProducto">490000</p>
+								</li>
+								<li class="productoDisponible" onclick="seleccionarProducto(this)">
+									<p class="nombreProducto">Mesa de comedor Charell</p>
+									<p class="precioProducto">130000</p>
+								</li>
+								<li class="productoDisponible" onclick="seleccionarProducto(this)">
+									<p class="nombreProducto">Mesa</p>
+									<p class="precioProducto">170000</p>
+								</li>
+								<li class="productoDisponible" onclick="seleccionarProducto(this)">
+									<p class="nombreProducto">Cama con panel Zanbury</p>
+									<p class="precioProducto">150000</p>
+								</li>
+								<li class="productoDisponible" onclick="seleccionarProducto(this)">
+									<p class="nombreProducto">Cama con panel Maribel</p>
+									<p class="precioProducto">160000</p>
+								</li>
+								<li class="productoDisponible" onclick="seleccionarProducto(this)">
+									<p class="nombreProducto">Cama con acabado de bronce</p>
+									<p class="precioProducto">120000</p>
+								</li>
+								
+							</ul>
+						</div>
+						<div id="contenedorCantidad">
+							<p>Cantidad:</p>
+							<input id="ipt_cantidadProducto" type="text" min="1" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57"> <!--validacion que evita que el numero sea negativo-->
+							<p id="medida">unidades</p>
+						</div>
+					</section>
+					<footer>
+						<button id="btn_aceptarSeleccion">Aceptar</button>
+						<button id="btn_cancelarSeleccion">Cancelar</button>
+					</footer>
+
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="pie">
+		<div class="menuPie">
+			<div class="colMenu">
+				<h4 class="titulo">Catalogo</h4>
+				<ul class="listaMenuPie">
+					<li><a href="listaSillones.html">Sillones</a></li>
+					<li><a href="listaMesasComedor.html">Mesas de comedor</a></li>
+					<li><a href="listaMesasCafe.html">Mesas para el café</a></li>
+					<li><a href="listaCamas.html">Camas</a></li>
+				</ul>
+			</div>
+			<div class="colMenu">
+				<h4 class="titulo">Compañia</h4>
+				<ul class="listaMenuPie">
+					<li><a href="QuienesSomos.html">Quienes somos</a></li>
+					<li><a href="QuienesSomos.html#contMision">Mision</a></li>
+					<li><a href="QuienesSomos.html#contVision">Vision</a></li>
+				</ul>
+			</div>
+			<div class="colMenu">
+				<h4 class="titulo">Contactenos</h4>
+				<ul class="listaMenuPie">
+					<li class="elementoListaRedSocial">
+						<i class="fab fa-facebook-square"></i>
+						<h4>Muebleria Euroconfort</h4>
+					</li>
+					<li class="elementoListaRedSocial">
+						<i class="fab fa-twitter"></i>
+						<h4>Muebleria Euroconfort</h4>
+					</li>
+					<li class="elementoListaRedSocial">
+						<i class="fab fa-instagram"></i>
+						<h4>Muebleria Euroconfort</h4>
+					</li>
+					<li class="elementoListaRedSocial">
+						<i class="fab fa-telegram"></i>
+						<h4>83277456</h4>
+					</li>
+					<li class="elementoListaRedSocial">
+						<i class="fab fa-whatsapp"></i>
+						<h4>87985462</h4>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>

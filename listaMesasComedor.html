@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="FontAwesome/css/all.css">
+	<script src="js/listaMesasComedor.js" type="text/javascript" charset="utf-8" async defer></script>
+	<script src="js/paginacion.js" type="text/javascript" charset="utf-8" async defer></script>
+</head>
+<body class="cuerpo">
+	
+	<header class="cabecera">
+		<h1 class="tituloPrincipal">Mesas de comedor</h1>
+	</header>
+
+	<main>
+		<section class="menuArriba">
+			<nav>
+				<ul id="menuHorizontal">
+					<li><a href="index.html">Inicio</a></li>
+					<li><a href="catalogo.html">Catalogo</a>
+
+						<ul>
+							<li><a href="listaSillones.html">Sillones</a></li>
+							<li><a href="listaMesasComedor.html">Mesas de comedor</a></li>
+							<li><a href="listaMesasCafe.html">Mesas para el café</a></li>
+							<li><a href="listaCamas.html">Camas</a></li>
+						</ul>
+
+					</li>
+						
+					<li><a href="contacto.html">Contacto</a></li>
+					<li><a href="QuienesSomos.html">Quienes somos</a></li>
+					<li><a href="proforma.html">Proforma</a></li>
+					<li><a href="videos.html">Videos</a></li>
+				</ul>
+			</nav>
+		</section>
+		<section class="productos">
+			
+			<div class="producto">
+				<img class="imagenFondoProducto" src="imagenes/mesas/mesa (1).jpg" alt="">
+				<div class="encimaProducto">
+					<h3 class="nombreProductoCatalogo">Mesa de comedor Charell</h3>
+					<img class="imagenprincipalProducto" src="imagenes/mesas/mesa (1).jpg" alt="">
+				</div>
+				<div class="encimaHover">
+					<button id="btn_detalle1" type="button">Ver Detalles</button>
+				</div>
+			</div>
+			<div class="producto">
+				<img class="imagenFondoProducto" src="imagenes/mesas/mesa (2).jpg" alt="">
+				<div class="encimaProducto">
+					<h3 class="nombreProductoCatalogo">Mesa Stuman redonda</h3>
+					<img class="imagenprincipalProducto" src="imagenes/mesas/mesa (2).jpg" alt="">
+				</div>
+				<div class="encimaHover">
+					<button id="btn_detalle2" type="button" onclick="mostrarDetalleProducto('mesaDeComedor')">Ver Detalles</button>
+				</div>
+			</div>
+			<div class="producto">
+				<img class="imagenFondoProducto" src="imagenes/mesas/mesa (3).jpg" alt="">
+				<div class="encimaProducto">
+					<h3 class="nombreProductoCatalogo">Mesa de comedor Charell</h3>
+					<img class="imagenprincipalProducto" src="imagenes/mesas/mesa (3).jpg" alt="">
+				</div>
+				<div class="encimaHover">
+					<button id="btn_detalle3" type="button">Ver Detalles</button>
+				</div>
+			</div>
+
+			<div class="producto">
+				<img class="imagenFondoProducto" src="imagenes/mesas/mesa (4).jpg" alt="">
+				<div class="encimaProducto">
+					<h3 class="nombreProductoCatalogo">Mesa de falda abatible redonda </h3>
+					<img class="imagenprincipalProducto" src="imagenes/mesas/mesa (4).jpg" alt="">
+				</div>
+				<div class="encimaHover">
+					<button id="btn_detalle4" type="button">Ver Detalles</button>
+				</div>
+			</div>
+			<div class="producto">
+				<img class="imagenFondoProducto" src="imagenes/mesas/mesa (5).jpg" alt="">
+				<div class="encimaProducto">
+					<h3 class="nombreProductoCatalogo">Mesa</h3>
+					<img class="imagenprincipalProducto" src="imagenes/mesas/mesa (5).jpg" alt="">
+				</div>
+				<div class="encimaHover">
+					<button id="btn_detalle5" type="button">Ver Detalles</button>
+				</div>
+			</div>
+			<div class="producto">
+				<img class="imagenFondoProducto" src="imagenes/mesas/mesa (6).jpg" alt="">
+				<div class="encimaProducto">
+					<h3 class="nombreProductoCatalogo">Mesa de comedor rectangular</h3>
+					<img class="imagenprincipalProducto" src="imagenes/mesas/mesa (6).jpg" alt="">
+				</div>
+				<div class="encimaHover">
+					<button id="btn_detalle6" type="button">Ver Detalles</button>
+				</div>
+			</div>
+
+			<div class="producto">
+				<img class="imagenFondoProducto" src="imagenes/mesas/mesa (7).jpg" alt="">
+				<div class="encimaProducto">
+					<h3 class="nombreProductoCatalogo">Juego de comedor Cimeran</h3>
+					<img class="imagenprincipalProducto" src="imagenes/mesas/mesa (7).jpg" alt="">
+				</div>
+				<div class="encimaHover">
+					<button id="btn_detalle7" type="button">Ver Detalles</button>
+				</div>
+			</div>
+			<div class="producto">
+				<img class="imagenFondoProducto" src="imagenes/mesas/mesa (8).jpg" alt="">
+				<div class="encimaProducto">
+					<h3 class="nombreProductoCatalogo">Mesa Stuman</h3>
+					<img class="imagenprincipalProducto" src="imagenes/mesas/mesa (8).jpg" alt="">
+				</div>
+				<div class="encimaHover">
+					<button id="btn_detalle8" type="button">Ver Detalles</button>
+				</div>
+			</div>
+			
+		</section>
+
+		<section class="contenedorListaPaginacion">
+			<ul id="listaPaginacion">
+				<li id="btn_paginacionAtras">&laquo;</li>
+				
+			</ul>
+		</section>
+	</main>
+
+	<section class="modals">
+		<div class="modal" id="modalMesaComedor1">
+			<div class="contenedorDetalle">
+				<section class="cuerpoDetalle">
+					<div class="imagen">
+						<img src="imagenes/mesas/mesa (1).jpg" alt="">
+					</div>
+					<h1 class="nombreProducto">Mesa de comedor Charell</h1>
+					<div class="informacion">
+						<p class="descripcion">
+						El diseño contemporáneo en línea recta de la colección de comedor "Charrell" presenta una terminación cálida y un estilo nítido con vidrio trasparente que captura a la perfección un estilo refrescante y fascinante que realza la decoración de su sala de estar. La terminación en color marrón claro de la base de la mesa con fascinante diseño contemporáneo soporta a la perfección un tablero de vidrio trasparente que presenta bordes biselados y pulidos combinados de forma exacta para crear una colección que será un aporte para cualquier comedor. Con las sillas tapizadas en cuero sintético en 4 colores distintos, la colección de comedor "Charrell" sin duda realzará el estilo de cualquier hogar.
+						</p>
+						<h2 class="productoDisponible">Producto Disponible</h2>
+						<h2 class="precioProducto">Precio:<br>₡130 000</h2>
+					</div>
+					<h2 class="tituloSecundario">Dimensiones:</h2>
+					<p id="dimensiones">114.30 cm Ancho x 75.57 cm Alto x 114.30 cm Profundidad</p>
+				</section>
+				<footer>
+					<hr>
+					<input id="btn_cerrar" type="submit" name="btn_cerrar" value="Cerrar">
+				</footer>
+
+			</div>
+		</div>
+
+		
+		<div class="modal" id="modalMesaComedor2">
+			<div class="contenedorDetalle">
+				<section class="cuerpoDetalle">
+					<div class="imagen">
+						<img src="imagenes/mesas/mesa (2).jpg" alt="">
+					</div>
+					<h1 class="nombreProducto">Mesa Stuman redonda</h1>
+					<div class="informacion">
+						<p class="descripcion">
+						Con su cálido acabado en un tono café oscuro sobre un esbelto diseño contemporáneo, la colección de comedor Stuman presenta cómodas sillas con respaldo curvilíneo, con asientos con cojines rellenos de poliuretano, que añadirán comodidad y estilo a todas sus cenas.
+						</p>
+						<h2 class="productoDisponible">Producto Disponible</h2>
+						<h2 class="precioProducto">Precio:<br>₡130 000</h2>
+					</div>
+					<h2 class="tituloSecundario">Dimensiones:</h2>
+					<p id="dimensiones">101.60 cm Ancho x 76.20 cm Alto x 101.60 cm Profundidad</p>
+				</section>
+				<footer>
+					<hr>
+					<input id="btn_cerrar" type="submit" name="btn_cerrar" value="Cerrar">
+				</footer>
+
+			</div>
+		</div>
+
+
+		<div class="modal" id="modalMesaComedor3">
+			<div class="contenedorDetalle">
+				<section class="cuerpoDetalle">
+					<div class="imagen">
+						<img src="imagenes/mesas/mesa (3).jpg" alt="">
+					</div>
+					<h1 class="nombreProducto">Mesa de comedor Charell</h1>
+					<div class="informacion">
+						<p class="descripcion">
+						El diseño contemporáneo en línea recta de la colección de comedor "Charrell" presenta una terminación cálida y un estilo nítido con vidrio trasparente que captura a la perfección un estilo refrescante y fascinante que realza la decoración de su sala de estar. La terminación en color marrón claro de la base de la mesa con fascinante diseño contemporáneo soporta a la perfección un tablero de vidrio trasparente que presenta bordes biselados y pulidos combinados de forma exacta para crear una colección que será un aporte para cualquier comedor. Con las sillas tapizadas en cuero sintético en 4 colores distintos, la colección de comedor "Charrell" sin duda realzará el estilo de cualquier hogar.
+						</p>
+						<h2 class="productoDisponible">Producto Disponible</h2>
+						<h2 class="precioProducto">Precio:<br>₡100 000</h2>
+					</div>
+					<h2 class="tituloSecundario">Dimensiones:</h2>
+					<p id="dimensiones">243.84 cm Ancho x 106.68 cm Alto x 111.76 cm Profundidad</p>
+				</section>
+				<footer>
+					<hr>
+					<input id="btn_cerrar" type="submit" name="btn_cerrar" value="Cerrar">
+				</footer>
+
+			</div>
+		</div>
+
+
+		<div class="modal" id="modalMesaComedor4">
+			<div class="contenedorDetalle">
+				<section class="cuerpoDetalle">
+					<div class="imagen">
+						<img src="imagenes/mesas/mesa (4).jpg" alt="">
+					</div>
+					<h1 class="nombreProducto">Mesa de falda abatible redonda </h1>
+					<div class="informacion">
+						<p class="descripcion">
+						Hecho con rica chapa de abedul y madera sólida en un acabado transitivo marrón oscuro con tonos grisáceos. Mesa compacta que da lugar a cuatro e incluye hojas caídas para múltiples funciones.
+						</p>
+						<h2 class="productoDisponible">Producto Disponible</h2>
+						<h2 class="precioProducto">Precio:<br>₡135 000</h2>
+					</div>
+					<h2 class="tituloSecundario">Dimensiones:</h2>
+					<p id="dimensiones">243.84 cm Ancho x 106.68 cm Alto x 111.76 cm Profundidad</p>
+				</section>
+				<footer>
+					<hr>
+					<input id="btn_cerrar" type="submit" name="btn_cerrar" value="Cerrar">
+				</footer>
+
+			</div>
+		</div>
+
+
+		<div class="modal" id="modalMesaComedor5">
+			<div class="contenedorDetalle">
+				<section class="cuerpoDetalle">
+					<div class="imagen">
+						<img src="imagenes/mesas/mesa (5).jpg" alt="">
+					</div>
+					<h1 class="nombreProducto">Mesa</h1>
+					<div class="informacion">
+						<p class="descripcion">
+						La calidad artesanal es claramente visible. Los elementos de diseño clásico, incluyendo las ricas patas giradas. Satisfaciendo tu gusto por los muebles tradicionales, la silla de extensión para comedor es elegante sin ser delicada. Deja que el estilo tome forma con un diseño cuadrado, o extiéndela para conseguir una espaciosa mesa rectangular.
+						</p>
+						<h2 class="productoDisponible">Producto Disponible</h2>
+						<h2 class="precioProducto">Precio:<br>₡170 000</h2>
+					</div>
+					<h2 class="tituloSecundario">Dimensiones:</h2>
+					<p id="dimensiones">243.84 cm Ancho x 106.68 cm Alto x 111.76 cm Profundidad</p>
+				</section>
+				<footer>
+					<hr>
+					<input id="btn_cerrar" type="submit" name="btn_cerrar" value="Cerrar">
+				</footer>
+
+			</div>
+		</div>
+
+
+
+		<div class="modal" id="modalMesaComedor6">
+			<div class="contenedorDetalle">
+				<section class="cuerpoDetalle">
+					<div class="imagen">
+						<img src="imagenes/mesas/mesa (6).jpg" alt="">
+					</div>
+					<h1 class="nombreProducto">Mesa de comedor rectangular</h1>
+					<div class="informacion">
+						<p class="descripcion">
+						El diseño contemporáneo en línea recta de la colección de comedor "Charrell" presenta una terminación cálida y un estilo nítido con vidrio trasparente que captura a la perfección un estilo refrescante y fascinante que realza la decoración de su sala de estar. La terminación en color marrón claro de la base de la mesa con fascinante diseño contemporáneo soporta a la perfección un tablero de vidrio trasparente que presenta bordes biselados y pulidos combinados de forma exacta para crear una colección que será un aporte para cualquier comedor. 
+						</p>
+						<h2 class="productoDisponible">Producto Disponible</h2>
+						<h2 class="precioProducto">Precio:<br>₡130 000</h2>
+					</div>
+					<h2 class="tituloSecundario">Dimensiones:</h2>
+					<p id="dimensiones">243.84 cm Ancho x 106.68 cm Alto x 111.76 cm Profundidad</p>
+				</section>
+				<footer>
+					<hr>
+					<input id="btn_cerrar" type="submit" name="btn_cerrar" value="Cerrar">
+				</footer>
+
+			</div>
+		</div>
+
+
+		<div class="modal" id="modalMesaComedor7">
+			<div class="contenedorDetalle">
+				<section class="cuerpoDetalle">
+					<div class="imagen">
+						<img src="imagenes/mesas/mesa (7).jpg" alt="">
+					</div>
+					<h1 class="nombreProducto">Juego de comedor Cimeran </h1>
+					<div class="informacion">
+						<p class="descripcion">
+						Con un diseño contemporáneo en línea recta cubierto con una terminación en color negro, la colección de comedor Cimeran presenta un diseño único en sus sillas con respaldo tipo rejilla que crean un estilo contemporáneo fantástico que sin duda realzará la decoración de cualquier comedor.
+						</p>
+						<h2 class="productoDisponible">Producto Disponible</h2>
+						<h2 class="precioProducto">Precio:<br>₡150 000</h2>
+					</div>
+					<h2 class="tituloSecundario">Dimensiones:</h2>
+					<p id="dimensiones">243.84 cm Ancho x 106.68 cm Alto x 111.76 cm Profundidad</p>
+				</section>
+				<footer>
+					<hr>
+					<input id="btn_cerrar" type="submit" name="btn_cerrar" value="Cerrar">
+				</footer>
+
+			</div>
+		</div>
+
+
+		<div class="modal" id="modalMesaComedor8">
+			<div class="contenedorDetalle">
+				<section class="cuerpoDetalle">
+					<div class="imagen">
+						<img src="imagenes/mesas/mesa (8).jpg" alt="">
+					</div>
+					<h1 class="nombreProducto">Mesa Stuman</h1>
+					<div class="informacion">
+						<p class="descripcion">
+						Con su cálido acabado en un tono madera claro sobre un esbelto diseño contemporáneo, la colección de comedor Stuman presenta cómodas sillas con respaldo curvilíneo, con asientos con cojines rellenos de poliuretano, que añadirán comodidad y estilo a todas sus cenas.
+						</p>
+						<h2 class="productoDisponible">Producto Disponible</h2>
+						<h2 class="precioProducto">Precio:<br>₡100 000</h2>
+					</div>
+					<h2 class="tituloSecundario">Dimensiones:</h2>
+					<p id="dimensiones">243.84 cm Ancho x 106.68 cm Alto x 111.76 cm Profundidad</p>
+				</section>
+				<footer>
+					<hr>
+					<input id="btn_cerrar" type="submit" name="btn_cerrar" value="Cerrar">
+				</footer>
+
+			</div>
+		</div>
+
+	</section>
+
+	<footer class="pie">
+		<div class="menuPie">
+			<div class="colMenu">
+				<h4 class="titulo">Catalogo</h4>
+				<ul class="listaMenuPie">
+					<li><a href="listaSillones.html">Sillones</a></li>
+					<li><a href="listaMesasComedor.html">Mesas de comedor</a></li>
+					<li><a href="listaMesasCafe.html">Mesas para el café</a></li>
+					<li><a href="listaCamas.html">Camas</a></li>
+				</ul>
+			</div>
+			<div class="colMenu">
+				<h4 class="titulo">Compañia</h4>
+				<ul class="listaMenuPie">
+					<li><a href="QuienesSomos.html">Quienes somos</a></li>
+					<li><a href="QuienesSomos.html#contMision">Mision</a></li>
+					<li><a href="QuienesSomos.html#contVision">Vision</a></li>
+				</ul>
+			</div>
+			<div class="colMenu">
+				<h4 class="titulo">Contactenos</h4>
+				<ul class="listaMenuPie">
+					<li class="elementoListaRedSocial">
+						<i class="fab fa-facebook-square"></i>
+						<h4>Muebleria Euroconfort</h4>
+					</li>
+					<li class="elementoListaRedSocial">
+						<i class="fab fa-twitter"></i>
+						<h4>Muebleria Euroconfort</h4>
+					</li>
+					<li class="elementoListaRedSocial">
+						<i class="fab fa-instagram"></i>
+						<h4>Muebleria Euroconfort</h4>
+					</li>
+					<li class="elementoListaRedSocial">
+						<i class="fab fa-telegram"></i>
+						<h4>83277456</h4>
+					</li>
+					<li class="elementoListaRedSocial">
+						<i class="fab fa-whatsapp"></i>
+						<h4>87985462</h4>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+
+</body>
+</html>
